@@ -3,6 +3,7 @@ fn main() {
     data_types();
 }
 
+// Variables
 fn variables() {
     println!("\n@@@@@ Variables @@@@@");
 
@@ -33,8 +34,38 @@ fn variables() {
     println!("target: {}", target);
 }
 
+// Data Types
 fn data_types() {
     println!("\n@@@@@ Data Types @@@@@");
     let parse_type: u32 = "2112".parse().expect("error parse");
     println!("parseType: {}", parse_type);
+
+    let mut scalar_int: i8 = 127;
+    scalar_int = scalar_int.overflowing_add(1).0;
+    let scalar_double: f64 = 3.14;
+    let scalar_bool: bool = true;
+    let scalar_char: char = 'A';
+    let is_string: &str = "Hello, World!";
+    println!(
+        "scalarType: {scalar_int}, {scalar_double}, {scalar_bool}, {scalar_char}, {is_string}"
+    );
+
+    let tuple_type: (bool, &str, u64) = (true, "Hello, World!", 100);
+    let (a, b, c) = tuple_type;
+    {
+        println!("tupleType Destructuring: {}, {}, {}", a, b, c);
+    }
+    println!(
+        "tupleType Index: {}, {}, {}",
+        tuple_type.0, tuple_type.1, tuple_type.2
+    );
+    println!("tupleType: {:?}", tuple_type);
+
+    let months: [i8; 12] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    println!("arrayType: {:?}", months);
+
+    let zero_array: [i64; 5] = [10; 5];
+    println!("zeroArrayType: {:?}", zero_array);
+
+    println!("first Month: {}", months[0]);
 }
