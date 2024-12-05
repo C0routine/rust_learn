@@ -1,6 +1,9 @@
+mod function;
+
 fn main() {
     variables();
     data_types();
+    function::function_start();
 }
 
 // Variables
