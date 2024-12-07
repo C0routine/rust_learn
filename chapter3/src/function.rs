@@ -24,7 +24,7 @@ fn function_parameters(x: i32, y: i32) {
 
 fn function_expression() {
     // 구문
-    let statements = 20;
+    // let statements = 20;
 
     // 표현식
     let expression = {
@@ -42,7 +42,7 @@ fn function_expression_return() -> i32 {
 fn function_expression_return2() -> i32 {
     let x = 10;
     // ; 세미콜론을 붙이면 구문으로 인식되어 반환되지 않음.
-    x + 777;
+    // x + 777;
     // return 키워드를 사용하면 반환됨.
     return x;
 }

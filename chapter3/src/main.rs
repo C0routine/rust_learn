@@ -1,9 +1,13 @@
+mod comment;
+mod control;
 mod function;
 
 fn main() {
     variables();
     data_types();
     function::function_start();
+    comment::comment_start();
+    control::control_start();
 }
 
 // Variables
